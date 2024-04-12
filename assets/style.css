@@ -51,6 +51,12 @@
 .tab-button.active {
   color: #fb7067;
 }
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: flex;
+}
 .product-item__img {
   max-width: 380px;
   height: 380px;
@@ -84,6 +90,15 @@
 .itc-slider-2 .itc-slider-btn-next {
   right: 0;
 } */
+
+
+
+
+
+
+
+
+
 
 /* Слайдер 3 АКЦИИ */
 

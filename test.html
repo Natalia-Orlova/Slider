@@ -145,3 +145,78 @@
 </body>
 
 </html>
+
+<!-- 
+<div class="tabs">
+    <ul class="tab-list">
+      <li class="tab-item active" data-tab="tab1">Tab 1</li>
+      <li class="tab-item" data-tab="tab2">Tab 2</li>
+      <li class="tab-item" data-tab="tab3">Tab 3</li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab1">Content of tab 1</div>
+      <div class="tab-pane" id="tab2">Content of tab 2</div>
+      <div class="tab-pane" id="tab3">Content of tab 3</div>
+    </div>
+  </div>
+
+
+  .tabs {
+    width: 100%;
+    display: inline-block;
+  }
+  
+  .tab-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .tab-item {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .tab-item.active {
+    background-color: #fff;
+  }
+  
+  .tab-content {
+    border: 1px solid #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var tabItems = document.querySelectorAll('.tab-item');
+  
+    tabItems.forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        var tabId = this.dataset.tab;
+        var tabContent = document.querySelector(`.tab-pane[id="${tabId}"]`);
+  
+        tabItems.forEach(function(tab) {
+          tab.classList.remove('active');
+        });
+  
+        this.classList.add('active');
+  
+        tabContent.classList.add('active');
+        tabContent.classList.remove('hide');
+      });
+    });
+  }); -->

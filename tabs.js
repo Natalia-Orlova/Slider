@@ -1,15 +1,21 @@
-const tabs = document.querySelectorAll('#tabs .tab-button');
-const tabContents = document.querySelectorAll('#tab-content .tab-content');
 
-tabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    console.log('click');
-    // Remove active class from all tabs and tab contents
-    tabs.forEach(tab => tab.classList.remove('active'));
-    tabContents.forEach(content => content.classList.remove('active'));
+document.addEventListener('DOMContentLoaded', function() {
+  const tabItems = document.querySelectorAll('.tab-button');
 
-    // Add active class to the clicked tab and corresponding tab content
-    tab.classList.add('active');
-    tabContents[index].classList.add('active');
+  tabItems.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      const tabId = this.dataset.tab;
+      const tabContent = document.querySelector(`.tab-content[id="${tabId}"]`);
+      console.log(tabContent);
+
+      tabItems.forEach(function(tab) {
+        tab.classList.remove('active');
+      });
+
+      this.classList.add('active');
+
+      tabContent.classList.add('active');
+      tabContent.classList.remove('hide');
+    });
   });
 });
