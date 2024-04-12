@@ -1,0 +1,120 @@
+/**
+ * ItcSlider
+ * @version 1.0.1
+ * @author https://github.com/itchief
+ * @copyright Alexander Maltsev 2020 - 2023
+ * @license MIT (https://github.com/itchief/ui-components/blob/master/LICENSE)
+ * @tutorial https://itchief.ru/javascript/slider
+ */
+
+.itc-slider {
+  position: relative;
+}
+
+.itc-slider-wrapper {
+  overflow: hidden;
+}
+
+.itc-slider-items {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.itc-slider-transition-none {
+  transition: none;
+}
+
+.itc-slider-item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  user-select: none;
+  will-change: transform;
+}
+
+/* кнопки влево и вправо */
+.itc-slider-btn {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  text-align: center;
+  border: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(255, 164, 164, 0.1);
+}
+
+.itc-slider-btn-hide {
+  display: none;
+}
+
+.itc-slider-btn-prev {
+  right: 6%;
+}
+
+.itc-slider-btn-next {
+  right: 0;
+}
+
+.itc-slider-btn:hover {
+  text-decoration: none;
+  background: rgb(0 0 0 / 30%);
+  outline: 0;
+}
+
+.itc-slider-btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itc-slider-btn-prev::before {
+  background-image: url("/assets/img/prev.svg");
+}
+
+.itc-slider-btn-next::before {
+  background-image: url("/assets/img/next.svg");
+}
+
+/* индикаторы */
+.itc-slider-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 15;
+  display: flex;
+  justify-content: center;
+  margin: 0 15%;
+  padding-left: 0;
+  list-style: none;
+}
+
+.itc-slider-indicator {
+  flex: 0 1 auto;
+  box-sizing: content-box;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 20px;
+  text-indent: -999px;
+  background-color: #fff;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
+.itc-slider-indicator-active {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #fff;
+}
