@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const tabItems = document.querySelectorAll('.tab-button');
 
   tabItems.forEach(function(tab) {
+    // console.log(tab);
     tab.addEventListener('click', function() {
       const tabId = this.dataset.tab;
+      console.log(tabId);
       const tabContent = document.querySelector(`.tab-content[id="${tabId}"]`);
       console.log(tabContent);
 
