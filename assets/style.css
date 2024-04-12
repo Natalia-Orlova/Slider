@@ -53,7 +53,7 @@
 }
 .product-item__img {
   max-width: 380px;
-  max-height: 380px;
+  height: 380px;
   object-fit: cover;
   margin-bottom: 24px;
   border-radius: 10px;
@@ -91,10 +91,6 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-/* .promotion__items {
-  gap: 70px;
-  justify-content: center;
-} */
 
 .promotion__header {
   color: purple;
