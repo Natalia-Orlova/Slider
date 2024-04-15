@@ -40,8 +40,6 @@
 #tabs {
   display: flex;
   gap: 20px;
-}
-#tabs {
   margin-bottom: 50px;
 }
 .tab-button {
@@ -75,7 +73,6 @@
 .itc-slider-2 {
   margin-bottom: 90px;
 }
-
 .itc-slider-2 .itc-slider-item {
   max-width: 34.5%;
   display: flex;
