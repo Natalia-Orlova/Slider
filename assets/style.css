@@ -138,6 +138,7 @@
   width: 100%;
   margin-bottom: 60px;
   display: flex;
+  gap: 70px;
 }
 .slider__items {
   position: relative;
@@ -160,11 +161,10 @@
   order: 2;
 }
 .nav {
-  width: 260px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 .nav h3 {
   font-family: "Yeseva One", serif;
