@@ -1,19 +1,19 @@
 [
     {
         "id": 0,
-        "img": "assets/img/product-img1.jpg",
+        "img": "assets/img/img1.jpg",
         "name": "Lorem ipsum dolor sit amet",
         "price": 800
     },
     {
         "id": 1,
-        "img": "assets/img/product-img2.jpg",
+        "img": "assets/img/img2.jpg",
         "name": "Lorem ipsum dolor sit amet",
         "price": 800
     },
     {
         "id": 2,
-        "img": "assets/img/product-img3.jpg",
+        "img": "assets/img/img3.jpg",
         "name": "Lorem ipsum dolor sit amet",
         "price": 800
     },
