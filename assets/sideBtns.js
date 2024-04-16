@@ -82,7 +82,7 @@
         };
 
         var _setUpListeners = function () {
-          // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
+          // добавление к кнопкам "назад" и "вперед" обработчика _controlClick для событя click
           _sliderControls.forEach(function (item) {
             item.addEventListener('click', _controlClick);
           });
@@ -109,3 +109,38 @@
       item.setAttribute('slider-id', index);
       multiItemSlider('[slider-id="'+ index +'"]');
     })
+
+
+
+// для свайпера
+
+//     const container = document.querySelector('.swiper-container');
+// const wrapper = document.querySelector('.swiper-wrapper');
+// const slides = document.querySelectorAll('.swiper-slide');
+// let isDragging = false;
+// let startPosition = 0;
+// let currentTranslate = 0;
+// let prevTranslate = 0;
+
+// container.addEventListener('mousedown', startDrag);
+// container.addEventListener('mouseup', endDrag);
+// container.addEventListener('mouseleave', endDrag);
+// container.addEventListener('mousemove', drag);
+
+// function startDrag(e) {
+//     startPosition = e.clientX;
+//     isDragging = true;
+//     prevTranslate = currentTranslate;
+// }
+
+// function endDrag() {
+//     isDragging = false;
+// }
+
+// function drag(e) {
+//     if (isDragging) {
+//         const currentPosition = e.clientX;
+//         currentTranslate = prevTranslate + currentPosition - startPosition;
+//         wrapper.style.transform = `translateX(${currentTranslate}px)`;
+//     }
+// }
