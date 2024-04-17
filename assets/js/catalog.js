@@ -7,7 +7,7 @@ const catalog = [
     products: [
       {
         id: 0,
-        img: "../assets/img/img2.jpg",
+        img: "assets/img/img2.jpg",
         name: "Lorem ipsum dolor sit amet",
         price: 800,
       },
