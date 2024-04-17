@@ -201,7 +201,7 @@
     max-width: 100%;
   }
   .move-right {
-    transform: translateX(0);
+    transform: translateX(5%);
   }
   .itc-slider-3 .itc-slider-btn-prev {
     right: 6%;
@@ -283,7 +283,7 @@
     height: 70%;
   }
   .move-right {
-    transform: translateX(0);
+    transform: translateX(5%);
   }
   .itc-slider-3 .itc-slider-btn {
     top: -12%;
@@ -297,6 +297,7 @@
   /*слайдеры продуктов*/
   .sliderSideBtns {
     flex-direction: column;
+    gap: unset;
   }
   .catalog .sliderSideBtns:nth-child(even) > div:nth-child(1) {
     order: 0;
