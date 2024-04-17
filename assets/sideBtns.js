@@ -14,6 +14,7 @@
           _transform = 0, // значение транфсофрмации .slider_wrapper
           _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
           _items = []; // массив элементов
+          var _startX = 0;
 
         // наполнение массива _items
         _sliderItems.forEach(function (item, index) {
@@ -81,11 +82,45 @@
           }          
         };
 
+        var _isTouchDevice = function () {
+          return !!('ontouchstart' in window || navigator.maxTouchPoints);
+        };
+
         var _setUpListeners = function () {
           // добавление к кнопкам "назад" и "вперед" обработчика _controlClick для событя click
           _sliderControls.forEach(function (item) {
             item.addEventListener('click', _controlClick);
           });
+
+          if (_isTouchDevice()) {
+            _mainElement.addEventListener('touchstart', function (e) {
+              _startX = e.changedTouches[0].clientX;
+            });
+            _mainElement.addEventListener('touchend', function (e) {
+              var
+                _endX = e.changedTouches[0].clientX,
+                _deltaX = _endX - _startX;
+              if (_deltaX > 50) {
+                _transformItem('left');
+              } else if (_deltaX < -50) {
+                _transformItem('right');
+              }
+            });
+          } else {
+            _mainElement.addEventListener('mousedown', function (e) {
+              _startX = e.clientX;
+            });
+            _mainElement.addEventListener('mouseup', function (e) {
+              var
+                _endX = e.clientX,
+                _deltaX = _endX - _startX;
+              if (_deltaX > 50) {
+                _transformItem('left');
+              } else if (_deltaX < -50) {
+                _transformItem('right');
+              }
+            });
+          }
         }
 
         // инициализация
@@ -109,38 +144,3 @@
       item.setAttribute('slider-id', index);
       multiItemSlider('[slider-id="'+ index +'"]');
     })
-
-
-
-// для свайпера
-
-//     const container = document.querySelector('.swiper-container');
-// const wrapper = document.querySelector('.swiper-wrapper');
-// const slides = document.querySelectorAll('.swiper-slide');
-// let isDragging = false;
-// let startPosition = 0;
-// let currentTranslate = 0;
-// let prevTranslate = 0;
-
-// container.addEventListener('mousedown', startDrag);
-// container.addEventListener('mouseup', endDrag);
-// container.addEventListener('mouseleave', endDrag);
-// container.addEventListener('mousemove', drag);
-
-// function startDrag(e) {
-//     startPosition = e.clientX;
-//     isDragging = true;
-//     prevTranslate = currentTranslate;
-// }
-
-// function endDrag() {
-//     isDragging = false;
-// }
-
-// function drag(e) {
-//     if (isDragging) {
-//         const currentPosition = e.clientX;
-//         currentTranslate = prevTranslate + currentPosition - startPosition;
-//         wrapper.style.transform = `translateX(${currentTranslate}px)`;
-//     }
-// }

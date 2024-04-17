@@ -108,9 +108,9 @@
   margin-bottom: 80px;
 }
 
-.move-left {
-  width: 100vw;
-  transform: translateX(-25%);
+.move-right {
+  /* width: 100%; */
+  transform: translateX(20%);
 }
 
 .itc-slider-3 .itc-slider-btn {
@@ -126,7 +126,7 @@
 }
 
 .itc-slider-3 .itc-slider-item {
-  max-width: 42%;
+  max-width: 60%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -200,7 +200,7 @@
   .itc-slider-3 .itc-slider-item {
     max-width: 100%;
   }
-  .move-left {
+  .move-right {
     transform: translateX(0);
   }
   .itc-slider-3 .itc-slider-btn-prev {
@@ -282,7 +282,7 @@
     width: 90%;
     height: 70%;
   }
-  .move-left {
+  .move-right {
     transform: translateX(0);
   }
   .itc-slider-3 .itc-slider-btn {
