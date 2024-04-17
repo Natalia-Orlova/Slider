@@ -78,11 +78,11 @@
 }
 
 .itc-slider-btn-prev::before {
-  background-image: url("/assets/img/prev.svg");
+  background-image: url("./img/prev.svg");
 }
 
 .itc-slider-btn-next::before {
-  background-image: url("/assets/img/next.svg");
+  background-image: url("./img/next.svg");
 }
 
 /* индикаторы */
