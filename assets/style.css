@@ -185,8 +185,37 @@
 }
 
 
+@media (min-width: 1024px) and (max-width: 1330px) {
+  /*популярное / новинки*/
+  .product-item__img {
+    max-width: 300px;
+    height: 300px;
+  }
+  .itc-slider-2 .itc-slider-item {
+    max-width: 34%;
+  }
+  /*акции*/
+  .promotion-item__img {
+    width: 85%;
+    height: 350px;
+  }
+  .itc-slider-3 .itc-slider-item {
+    max-width: 70%;
+  }
+  /*продукты*/
+  .slider__item {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .product__img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
 /*планшетная версия*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   /*популярное / новинки*/
   .product-item__img {
     width: 350px;
