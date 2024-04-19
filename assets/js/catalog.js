@@ -175,32 +175,34 @@ const productsSections = document.querySelector(".catalog");
 
 catalog.forEach((item) => {
   const sectionEl = `
-    <div class="sliderSideBtns" slider-id="${item.id}">
-        <div class="nav">
-            <h3>${item.section}</h3>
-            <div class="btns">
-                <button class="itc-slider-btn itc-slider-btn-prev"></button>
-                <button class="itc-slider-btn itc-slider-btn-next"></button>
-            </div>
-        </div>
-        <div class="slider__items">
-            <div class="slider__wrapper">
-            </div>
-        </div>
-    </div>`;
+    <div class="itc-slider itc-slider-2 sliderSideBtns" data-slider="itc-slider">
+    <div class="nav">
+      <h3>${item.section}</h3>
+      <div class="btns">
+          <button class="itc-slider-btn itc-slider-btn-prev"></button>
+          <button class="itc-slider-btn itc-slider-btn-next"></button>
+      </div>
+    </div>
 
+    <div class="itc-slider-wrapper">
+      <div class="popular__products itc-slider-items">
+      </div>
+    </div>`;
   productsSections.insertAdjacentHTML("beforeend", sectionEl);
-  const products = document.querySelectorAll(".slider__wrapper");
+
+  const products = productsSections.querySelectorAll(".itc-slider-items");
 
   item.products.forEach((product) => {
     const productEl = `
-                <div class="slider__item">
-                    <img class="product__img" src="${product.img}" alt="product-image">
-                    <h4 class="product-item__name">${product.name}</h4>
-                    <p class="product-item__price">От ${product.price}&#8381;</p>
-                </div>`;
+      <div class="product-item itc-slider-item">
+        <img class="product__img" src="${product.img}" alt="product-image">
+        <h4 class="product-item__name">${product.name}</h4>
+        <p class="product-item__price">От ${product.price}&#8381;</p>
+      </div>`;
     products.forEach((element) => {
       element.insertAdjacentHTML("beforeend", productEl);
     });
   });
 });
+
+
